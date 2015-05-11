@@ -5,6 +5,8 @@
  */
 package EmploiDuTemps;
 
+import scolarité.Module;
+
 /**
  *
  * @author pascal.khuu
@@ -17,7 +19,9 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
     public tableauEmploiDuTemps() {
         initComponents();
     }
-
+    public void setValueAt(Module test,int rowIndex,int columnIndex){
+       //permet de run module selon le row index et column index 
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
