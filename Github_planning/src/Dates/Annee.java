@@ -27,9 +27,9 @@ public class Annee {
     }
 
     public void initMois() {
-        listeGetMois();
+        listeGetMois();//ajouter les mois a l'année
 
-        listeDesJours();
+        listeDesJours();//ajouter les jour au mois
         //afficherMois();
        // afficherJours();
         for (int i = 0; i < this.listeMois.size(); i++) {
