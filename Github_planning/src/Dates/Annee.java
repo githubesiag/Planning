@@ -52,13 +52,22 @@ public class Annee {
         }
 
     }
-public ArrayList<Mois> getListeMois() {
+    public ArrayList<Mois> getListeMois() {
         return this.listeMois;
     }
 
     public void setListeMois(ArrayList<Mois> listeMois) {
         this.listeMois = listeMois;
     }
+    
+    public String affichagesemaine(int i, int j) {
+        /**le premier int i permet de selectionner le moi dans l'array list
+         * Le second selectionne la semaine dans le mois precedemment selectionner
+         */
+        return null;
+        
+    }
+
 
     public ArrayList<Integer> getListeNbJours() {
         return this.listeNbJours;
