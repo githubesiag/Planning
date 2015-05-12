@@ -14,7 +14,7 @@ import scolarité.Module;
  * @author Elmouatassim
  */
 public class Tab extends javax.swing.JFrame {
-Monmodel model;
+    Monmodel model;
     /**
      * Creates new form Tab
      */
@@ -22,6 +22,10 @@ Monmodel model;
         initComponents();
     }
     public class Monmodel extends AbstractTableModel{
+        
+        public Monmodel(){
+        
+        }
 
         @Override
         public int getRowCount() {
@@ -35,7 +39,7 @@ Monmodel model;
 
         @Override
         public Object getValueAt(int i, int i1) {
-         /** ici j'ai penser a mettre le nom d'un module dans la table
+         /** ici j'ai penser a mettre le nom d'un module pour l'identifier dans le planning dans la table
           * 
           */
         return null;
@@ -86,7 +90,7 @@ Monmodel model;
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+       /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -112,7 +116,7 @@ Monmodel model;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
             new Tab().setVisible(true);
-            }
+              }
         });
     }
 
