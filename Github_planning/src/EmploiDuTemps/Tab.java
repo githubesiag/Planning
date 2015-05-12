@@ -8,6 +8,7 @@ package EmploiDuTemps;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import scolarité.Module;
+import Dates.Annee;
 
 /**
  *
@@ -15,6 +16,7 @@ import scolarité.Module;
  */
 public class Tab extends javax.swing.JFrame {
     Monmodel model;
+    
     /**
      * Creates new form Tab
      */
@@ -22,7 +24,7 @@ public class Tab extends javax.swing.JFrame {
         initComponents();
     }
     public class Monmodel extends AbstractTableModel{
-        
+   
         public Monmodel(){
         
         }
@@ -45,8 +47,9 @@ public class Tab extends javax.swing.JFrame {
         return null;
         }
         public String getColumnName(int col){ 
-            return null;
-            //code a faire pour retourner les jours qui nous intérresent
+        //il faudrait pouvoir recuperer les jour depuis la classe année mais impossible de le faire sans erreur ...
+        return null;
+        
     }
     }
     /**

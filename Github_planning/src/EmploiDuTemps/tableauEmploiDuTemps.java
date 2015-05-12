@@ -20,7 +20,7 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
         initComponents();
     }
     public void setValueAt(Module test,int rowIndex,int columnIndex){
-       //permet de run module selon le row index et column index 
+       //permet mettre un objet module selon le row index et column index 
     }
     /**
      * This method is called from within the constructor to initialize the form.
