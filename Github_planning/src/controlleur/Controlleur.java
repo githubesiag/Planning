@@ -5,12 +5,14 @@
  */
 package controlleur;
 
+import Dates.Annee;
+
 /**
  *
  * @author Fouad777
  */
 public class Controlleur extends javax.swing.JPanel {
-
+int a;
     /**
      * Creates new form Controlleur
      */
@@ -103,11 +105,15 @@ public class Controlleur extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        a = Integer.parseInt(jTextField1.getText());
+        Annee t = new Annee(a);//ici on créer un année selon ce qui est rentrée en parametre
+        
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Code a utiliser pour récuperer les infos des jtextfield !
+        a = Integer.parseInt(jTextField1.getText());
+        Annee t = new Annee(a);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

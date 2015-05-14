@@ -18,7 +18,7 @@ import scolarité.Formation;
  */
 public class main {
     public static void main(String[] args) {
-          JourOuvre joursOuvres;
+        JourOuvre joursOuvres;
         JourNonOuvre joursNonOuvres;
         Annee uneAnnee = new Annee(2014);
         uneAnnee.joursMois(Mois.AVRIL);
