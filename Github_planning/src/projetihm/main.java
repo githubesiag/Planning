@@ -10,6 +10,7 @@ import Dates.JourNonOuvre;
 import Dates.JourOuvre;
 import Dates.Mois;
 import Dates.Annee;
+import EmploiDuTemps.Tab;
 import javax.swing.JFrame;
 import scolarité.Formation;
 /**
@@ -17,7 +18,8 @@ import scolarité.Formation;
  * @author Pascal
  */
 public class main {
-    public static void main(String[] args) {
+   
+   /** public static void main(String[] args) {
         JourOuvre joursOuvres;
         JourNonOuvre joursNonOuvres;
         Annee uneAnnee = new Annee(2014);
@@ -33,5 +35,5 @@ public class main {
         System.out.println("Annee "+annee.getAnnee()+ " choisie comporte "+annee.nbJoursTotal());
         calendrier.listeAnnee();
 
-}
+}**/
 }

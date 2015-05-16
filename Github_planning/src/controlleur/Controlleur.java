@@ -106,7 +106,7 @@ int a;
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         a = Integer.parseInt(jTextField1.getText());
-        Annee t = new Annee(a);//ici on créer un année selon ce qui est rentrée en parametre
+        
         
         
     }//GEN-LAST:event_jTextField1ActionPerformed
