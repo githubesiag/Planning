@@ -16,7 +16,7 @@ import javax.swing.table.TableModel;
  * @author Elmouatassim
  */
 public class Tab extends javax.swing.JFrame {
-   // private TableModel model;
+    private TableModel model;
    
     
     /**
@@ -47,11 +47,12 @@ public class Tab extends javax.swing.JFrame {
          /** ici j'ai penser a mettre le nom d'un module pour l'identifier dans le planning dans la table
           * 
           */
-        return null;
+        return 1;
         }
+        @Override
         public String getColumnName(int col){ 
         //il faudrait pouvoir recuperer les jour depuis la classe année mais impossible de le faire sans erreur ...
-        return null;
+        return "pa";
         
     }
     }
@@ -69,7 +70,6 @@ public class Tab extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable2.setModel(model);
         jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
