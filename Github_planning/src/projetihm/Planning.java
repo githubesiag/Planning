@@ -35,21 +35,22 @@ public class Planning {
     public void setFormations(ArrayList<Formation> formations) {
         this.formations = formations;
     }   
-    void serialiser() throws FileNotFoundException, IOException {
+    public void serialiser() throws FileNotFoundException, IOException {
     File file = new File("C://test.txt");
     FileOutputStream fis = new FileOutputStream(file);
     ObjectOutputStream ecr = new ObjectOutputStream(fis);
     ecr.writeObject(this);
     ecr.close();
+    
     }
     
     public void deserialiser() throws FileNotFoundException, IOException, ClassNotFoundException {
       //String PATH="C:\\";
       File file = new File("C:\test.txt");
-      Planning instance = new Planning(recuperation);
+      Planning sauvegarde = new Planning(recuperation);
       FileInputStream fil = new FileInputStream(file);
       ObjectInputStream fal = new ObjectInputStream(fil);
-      instance=(Planning) fal.readObject();
+      sauvegarde = (Planning) fal.readObject();
     }
     
     
