@@ -73,10 +73,10 @@ public class Formation {
 
         Seances seances4 = new Seances(seanceModule4);
 
-        this.ajouterModule(this.modules, new Module("JAVA", "J", Color.blue, 20, seances));
-        this.ajouterModule(this.modules, new Module("UML", "U", Color.red, 10, seances2));
-        this.ajouterModule(this.modules, new Module("Programmation linéaire", "PL", Color.white, 200, seances3));
-        this.ajouterModule(this.modules, new Module("Anglais", "A", Color.yellow, 10, seances4));
+        this.ajouterModule(this.modules, new Module("JAVA", "J", Color.green, 20, seances));
+        this.ajouterModule(this.modules, new Module("UML", "U", Color.green, 10, seances2));
+        this.ajouterModule(this.modules, new Module("Programmation linéaire", "PL", Color.green, 200, seances3));
+        this.ajouterModule(this.modules, new Module("Anglais", "A", Color.green, 10, seances4));
 
     }
 
