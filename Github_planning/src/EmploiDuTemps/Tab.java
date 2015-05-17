@@ -46,7 +46,7 @@ public class Tab extends javax.swing.JFrame {
         public Object getValueAt(int i, int i1) {
          /** ici j'ai penser a mettre le nom d'un module pour l'identifier dans le planning dans la table
           * 
-          */
+         */
         return 1;
         }
         @Override

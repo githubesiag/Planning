@@ -5,6 +5,7 @@
  */
 package EmploiDuTemps;
 
+import Dates.Annee;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.junit.Test;
@@ -18,9 +19,11 @@ import projetihm.Planning;
 public class tableauEmploiDuTempsTest {
     Planning planning;
     Planning sauvegarde;
-    
+    tableauEmploiDuTemps EmploiDuTemps;
+    Annee t;
     
     public tableauEmploiDuTempsTest() {
+       
     }
 
     @Test
@@ -39,4 +42,18 @@ public class tableauEmploiDuTempsTest {
     public void deserialiser(){
         
     }
+    @Test
+    public void tabconf(){
+        assertEquals(7, EmploiDuTemps.getColumnCount());
+        assertEquals(2,EmploiDuTemps.getRowCount());
+       
+    }
+    
+    @Test
+    public void jourannée(){
+        assertEquals(365, t.nbJoursTotal());
+        
+    }
+    
+    
 }

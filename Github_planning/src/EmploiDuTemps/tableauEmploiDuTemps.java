@@ -56,7 +56,6 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(emploiDuTemps);
-        emploiDuTemps.getAccessibleContext().setAccessibleParent(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,7 +78,7 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void emploiDuTempsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emploiDuTempsMousePressed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_emploiDuTempsMousePressed
 
     /**
@@ -121,4 +120,11 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
     private javax.swing.JTable emploiDuTemps;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    public double getColumnCount() {
+        return 7;
+    }
+    public double getRowCount(){
+        return 2;
+    }
 }
