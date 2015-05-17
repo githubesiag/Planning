@@ -5,6 +5,10 @@
  */
 package EmploiDuTemps;
 
+import Dates.Annee;
+import Dates.JourNonOuvre;
+import Dates.JourOuvre;
+import scolarité.Formation;
 import scolarité.Module;
 
 /**
@@ -12,16 +16,22 @@ import scolarité.Module;
  * @author pascal.khuu
  */
 public class tableauEmploiDuTemps extends javax.swing.JFrame {
-//pascal beau gosse
+
+    private Formation formation = new Formation("esiag", new Annee(2015));
+    //pascal 
     /**
      * Creates new form tableauEmploiDuTemps
      */
     public tableauEmploiDuTemps() {
         initComponents();
     }
-    public void setValueAt(Module test,int rowIndex,int columnIndex){
-       //permet mettre un objet module selon le row index et column index 
+
+    public void setValueAt(Module test, int rowIndex, int columnIndex) {
+        //permet mettre un objet module selon le row index et column index 
     }
+
+
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,10 +56,11 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
                 "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"
             }
         ));
+        emploiDuTemps.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         emploiDuTemps.setGridColor(new java.awt.Color(153, 0, 153));
         emploiDuTemps.setMaximumSize(new java.awt.Dimension(2147483647, 60));
         emploiDuTemps.setRowHeight(50);
-        emploiDuTemps.setRowMargin(20);
+        emploiDuTemps.setSelectionBackground(this.formation.getModules().get(0).getCouleur());
         emploiDuTemps.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 emploiDuTempsMousePressed(evt);
@@ -62,16 +73,16 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
