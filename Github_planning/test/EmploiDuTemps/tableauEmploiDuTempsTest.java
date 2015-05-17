@@ -5,14 +5,20 @@
  */
 package EmploiDuTemps;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import projetihm.Planning;
 
 /**
  *
  * @author Fouad777
  */
 public class tableauEmploiDuTempsTest {
+    Planning planning;
+    Planning sauvegarde;
+    
     
     public tableauEmploiDuTempsTest() {
     }
@@ -25,4 +31,12 @@ public class tableauEmploiDuTempsTest {
     public void testMain() {
     }
     
+    @Test
+    public void serialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
+        
+    }
+    @Test
+    public void deserialiser(){
+        
+    }
 }
