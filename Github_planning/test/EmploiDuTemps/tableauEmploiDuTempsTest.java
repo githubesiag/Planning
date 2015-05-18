@@ -17,12 +17,13 @@ import projetihm.Planning;
  * @author Fouad777
  */
 public class tableauEmploiDuTempsTest {
-    Planning planning;
+    //Planning planning = new Planning(test);
     Planning sauvegarde;
-    tableauEmploiDuTemps EmploiDuTemps;
-    Annee t;
+    tableauEmploiDuTemps EmploiDuTemps = new tableauEmploiDuTemps();
+    Annee t = new Annee(2015);
     
     public tableauEmploiDuTempsTest() {
+        
        
     }
 
@@ -44,8 +45,8 @@ public class tableauEmploiDuTempsTest {
     }
     @Test
     public void tabconf(){
-        assertEquals(7, EmploiDuTemps.getColumnCount());
-        assertEquals(2,EmploiDuTemps.getRowCount());
+        assertEquals(7, EmploiDuTemps.getColumnCount(),1);
+        assertEquals(2,EmploiDuTemps.getRowCount(),1);
        
     }
     
