@@ -40,14 +40,14 @@ public class tableauEmploiDuTempsTest {
     public void testMain() {
     }
     
-    /**@Test
+    @Test
     public void serialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
     planning.serialiser();
     sauvegarde.deserialiser();
     assertEquals(planning, sauvegarde);
     
     
-    }**/
+    }
     @Test
     public void deserialiser(){
         

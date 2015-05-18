@@ -47,7 +47,7 @@ public class Tab extends javax.swing.JFrame {
          /** ici j'ai penser a mettre le nom d'un module pour l'identifier dans le planning dans la table
           * 
          */
-        return 1;
+        return null;
         }
         @Override
         public String getColumnName(int col){ 
