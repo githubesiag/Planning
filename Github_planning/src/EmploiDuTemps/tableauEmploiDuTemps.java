@@ -49,8 +49,8 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
         emploiDuTemps.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         emploiDuTemps.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, "Week end", "Week end"},
+                {null, null, null, null, null, "Week end", "Week end"}
             },
             new String [] {
                 "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"
