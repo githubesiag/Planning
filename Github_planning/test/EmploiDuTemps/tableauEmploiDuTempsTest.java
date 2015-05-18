@@ -8,19 +8,24 @@ package EmploiDuTemps;
 import Dates.Annee;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import projetihm.Planning;
+import scolarité.Formation;
 
 /**
  *
  * @author Fouad777
  */
 public class tableauEmploiDuTempsTest {
-    //Planning planning = new Planning(test);
-    Planning sauvegarde;
+    ArrayList<Formation> formations = new ArrayList<Formation>();
+    ArrayList<Formation> recuperation = new ArrayList<Formation>();
+    Planning planning = new Planning(formations);
+    Planning sauvegarde = new Planning(recuperation);
     tableauEmploiDuTemps EmploiDuTemps = new tableauEmploiDuTemps();
     Annee t = new Annee(2015);
+    
     
     public tableauEmploiDuTempsTest() {
         
@@ -37,7 +42,11 @@ public class tableauEmploiDuTempsTest {
     
     @Test
     public void serialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
-        
+    planning.serialiser();
+    sauvegarde.deserialiser();
+    assertEquals(planning, sauvegarde);
+    
+    
     }
     @Test
     public void deserialiser(){
