@@ -6,13 +6,14 @@
 package controlleur;
 
 import Dates.Annee;
+import Dates.Mois;
 
 /**
  *
  * @author Fouad777
  */
 public class Controlleur extends javax.swing.JPanel {
-int a;
+
     /**
      * Creates new form Controlleur
      */
@@ -105,15 +106,24 @@ int a;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        a = Integer.parseInt(jTextField1.getText());
+       
         
         
         
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        a = Integer.parseInt(jTextField1.getText());
+       int a = Integer.parseInt(jTextField1.getText());
         Annee t = new Annee(a);
+        String mois = new String();
+        mois = jTextField2.getText();
+        int semaine = Integer.parseInt(jTextField3.getText());
+     //il faudrait créer les dates ici ?
+        
+            
+            
+            
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
