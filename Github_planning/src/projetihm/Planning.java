@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * @author Christine
  */
 public class Planning {
-
+File file;
     ArrayList<Formation> formations = new ArrayList<Formation>();
     ArrayList<Formation> recuperation = new ArrayList<Formation>();
 
@@ -35,8 +35,8 @@ public class Planning {
     public void setFormations(ArrayList<Formation> formations) {
         this.formations = formations;
     }   
-    public void serialiser() throws FileNotFoundException, IOException {
-    File file = new File("C://test.txt");
+    public void serialiser(File file) throws FileNotFoundException, IOException {
+    //File file = new File("Planning");
     FileOutputStream fis = new FileOutputStream(file);
     ObjectOutputStream ecr = new ObjectOutputStream(fis);
     ecr.writeObject(this);
@@ -44,15 +44,30 @@ public class Planning {
     
     }
     
-    public void deserialiser() throws FileNotFoundException, IOException, ClassNotFoundException {
-      //String PATH="C:\\";
-      File file = new File("C:\test.txt");
+    public void deserialiser(File file) throws FileNotFoundException, IOException, ClassNotFoundException {
+          
       Planning sauvegarde = new Planning(recuperation);
       FileInputStream fil = new FileInputStream(file);
       ObjectInputStream fal = new ObjectInputStream(fil);
       sauvegarde = (Planning) fal.readObject();
     }
+   public void deserialiser() throws FileNotFoundException, IOException, ClassNotFoundException {
+      //String PATH="C
+      File file = new File("Sauvegarde planning"); 
+      Planning sauvegarde = new Planning(recuperation);
+      FileInputStream fil = new FileInputStream(file);
+      ObjectInputStream fal = new ObjectInputStream(fil);
+      sauvegarde = (Planning) fal.readObject();
+    } 
+       
+    public void serialiser() throws FileNotFoundException, IOException {
+    File file = new File("Planning");
+    FileOutputStream fis = new FileOutputStream(file);
+    ObjectOutputStream ecr = new ObjectOutputStream(fis);
+    ecr.writeObject(this);
+    ecr.close();
     
-    
+    }    
+     
     
 }

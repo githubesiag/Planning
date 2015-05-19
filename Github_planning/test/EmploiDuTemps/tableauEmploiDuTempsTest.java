@@ -7,7 +7,9 @@ package EmploiDuTemps;
 
 import Dates.Annee;
 import java.awt.Color;
+import static java.awt.Color.blue;
 import static java.awt.Color.red;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,6 +39,7 @@ public class tableauEmploiDuTempsTest {
     
     
     
+    
     public tableauEmploiDuTempsTest() {
     
        
@@ -52,15 +55,21 @@ public class tableauEmploiDuTempsTest {
     
     @Test
     public void serialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
-    planning.serialiser();
-    sauvegarde.deserialiser();
-    assertEquals(planning, sauvegarde);
+    File file = new File("testUnitaire");
+    planning.serialiser(file);
+    file.exists();
+    
+    
     
     
     }
     @Test
-    public void deserialiser(){
-     //commentaire bidon 18/05/2015   
+    public void deserialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
+    File file = new File("testUnitaire");
+    planning.serialiser(file);
+    sauvegarde.deserialiser();
+    assertEquals(planning, sauvegarde);
+    
     }
     @Test
     public void tabconf(){
@@ -79,26 +88,44 @@ public class tableauEmploiDuTempsTest {
         assertEquals(366,bis.nbJoursTotal());
     }
     
-   /** @Test
-    public Module(String nom, String abreviation, Color couleur, int dureeHeures, Seances seances) {
-        this.nom = nom;
-        this.abreviation = abreviation;
-        this.couleur = couleur;
-        this.dureeHeures = dureeHeures;
-        this.seances = seances;
-    }**/
+    /**
+     *
+     */
+    @Test
+    public void TestConstructeurModule() {
+     assertEquals("Math", test.getNom());
+        assertEquals("MTH", test.getAbreviation());
+        assertEquals(red, test.getCouleur());
+        assertEquals(24, test.getDuree(), 0);
+        assertEquals(sc, test.getSeances());   
+        
+        
+        
+    }
 
 
     @Test
     public void modiffModule(){
-        //methode pour modifier les attributs des modules.
+       /** String Java = new String();
+        String Jav = new String();
+        Color blue;
+        int nbsc = 12;**/
+        test.setNom("Java");
+        test.setAbreviation("Jav");
+        test.setCouleur(blue);
+        test.setDuree(12);
+        assertEquals("Java", test.getNom());
+        assertEquals("Jav", test.getAbreviation());
+        assertEquals(blue, test.getCouleur());
+        assertEquals(12, test.getDuree(), 0);
+        
+        
     }
-
-    @Test
-    public void Module(){
-        //constructeur module
-    }
-
-
-
+@Test
+public void nbheureModule(){
+    test.setDuree(28);
+    assertEquals(28, test.getDuree(), 1);
+}
+   
+   
 }
