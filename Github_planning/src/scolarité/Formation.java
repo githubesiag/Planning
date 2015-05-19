@@ -87,7 +87,13 @@ public class Formation {
             System.out.println("Erreur! Le module " + m.getNom() + " ne peut être ajouté");
         }
     }
-
+    public void ajouterModule(Module m) {
+        if (verifNbSeances(m) == true) {
+            this.modules.add(m);
+        } else {
+            System.out.println("Erreur! Le module " + m.getNom() + " ne peut être ajouté");
+        }
+    }
     public String getNom() {
         return nom;
     }

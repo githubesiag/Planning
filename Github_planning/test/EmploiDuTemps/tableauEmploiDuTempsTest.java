@@ -36,7 +36,8 @@ public class tableauEmploiDuTempsTest {
     private ArrayList<Seance> listeSeances;
     Seances sc = new Seances(listeSeances);
     Module test = new Module("Math","MTH",red,24,sc);
-    
+    Formation formation=new Formation("ESIAG",new Annee(2014));
+    private ArrayList<Module> modules = new ArrayList<Module>();
     
     
     
@@ -126,6 +127,10 @@ public void nbheureModule(){
     test.setDuree(28);
     assertEquals(28, test.getDuree(), 1);
 }
-   
+   @Test
+   public void nbheureFormation(){
+       formation.ajouterModule(modules,test);
+       assertEquals(24, formation.dureeTotale(), 0);
+   }
    
 }
