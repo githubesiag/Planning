@@ -87,4 +87,18 @@ public class tableauEmploiDuTempsTest {
         this.dureeHeures = dureeHeures;
         this.seances = seances;
     }**/
+
+
+    @Test
+    public void modiffModule(){
+        //methode pour modifier les attributs des modules.
+    }
+
+    @Test
+    public void Module(){
+        //constructeur module
+    }
+
+
+
 }
