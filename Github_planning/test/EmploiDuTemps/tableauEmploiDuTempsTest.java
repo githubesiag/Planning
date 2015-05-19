@@ -6,6 +6,8 @@
 package EmploiDuTemps;
 
 import Dates.Annee;
+import java.awt.Color;
+import static java.awt.Color.red;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,6 +15,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import projetihm.Planning;
 import scolarité.Formation;
+import scolarité.Module;
+import scolarité.Seance;
+import scolarité.Seances;
 
 /**
  *
@@ -25,10 +30,15 @@ public class tableauEmploiDuTempsTest {
     Planning sauvegarde = new Planning(recuperation);
     tableauEmploiDuTemps EmploiDuTemps = new tableauEmploiDuTemps();
     Annee t = new Annee(2015);
+    Annee bis = new Annee(2012);
+    private ArrayList<Seance> listeSeances;
+    Seances sc = new Seances(listeSeances);
+    Module test = new Module("Math","MTH",red,24,sc);
+    
     
     
     public tableauEmploiDuTempsTest() {
-        
+    
        
     }
 
@@ -64,6 +74,17 @@ public class tableauEmploiDuTempsTest {
         assertEquals(365, t.nbJoursTotal());
         
     }
+    @Test
+    public void bisextile(){
+        assertEquals(366,bis.nbJoursTotal());
+    }
     
-    
+   /** @Test
+    public Module(String nom, String abreviation, Color couleur, int dureeHeures, Seances seances) {
+        this.nom = nom;
+        this.abreviation = abreviation;
+        this.couleur = couleur;
+        this.dureeHeures = dureeHeures;
+        this.seances = seances;
+    }**/
 }
