@@ -19,8 +19,8 @@ import scolarité.Formation;
  */
 public class main {
    
-   /** public static void main(String[] args) {
-        JourOuvre joursOuvres;
+    public static void main(String[] args) {
+        /**JourOuvre joursOuvres;
         JourNonOuvre joursNonOuvres;
         Annee uneAnnee = new Annee(2014);
         uneAnnee.joursMois(Mois.AVRIL);
@@ -31,9 +31,10 @@ public class main {
         System.out.println ("la date choisie est "+date.getJour()+" "+ date.getNumeroJour()+ " "+date.getMois()+ " "+date.getAnnee() );
         Calendrier calendrier=new Calendrier(date);
         Annee annee=new Annee(date.getAnnee());
-        
-        System.out.println("Annee "+annee.getAnnee()+ " choisie comporte "+annee.nbJoursTotal());
+                System.out.println("Annee "+annee.getAnnee()+ " choisie comporte "+annee.nbJoursTotal());
         calendrier.listeAnnee();
-
-}**/
+**/
+        Annee test = new Annee(2014);
+        test.DateMoi(2);
+}
 }

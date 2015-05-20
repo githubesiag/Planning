@@ -171,7 +171,7 @@ public class Annee {
             }
 
         }
-        System.out.println("Le mois " + mois + " de l'année " + this.annee + " comporte " + nbJours + " jours");
+        //System.out.println("Le mois " + mois + " de l'année " + this.annee + " comporte " + nbJours + " jours");
         return nbJours;
     }
 //nombre total de jours dans l'année
@@ -187,72 +187,126 @@ public class Annee {
     }
 
     public void DateMoi(int i){
-        int janv[] = new int[45];
+       Date[] janv = new Date[32];
+       Date[] fevr = new Date[32];
+       Date[] marss = new Date[32];
+       Date[] avri = new Date[32];
+       Date[] mais = new Date[32];
+       Date[] juinn = new Date[32];
+       Date[] juil = new Date[32];
+       Date[] aoutt = new Date[32];
+       Date[] semp = new Date[32];
+       Date[] octo = new Date[32];
+       Date[] nove = new Date[32];
+       Date[] dece = new Date[32];
+       
+           
+               
 
         switch (i)
         {
             
         case 1 :
+            System.out.println("On est dans le case 1");
         for(int a=1;a<=this.joursMois(Mois.JANVIER);a++){
-            System.out.println("test");
-            //Date janv = new Date(i,Mois.JANVIER,this.annee);
+            System.out.println(a);
+            janv[a] = new Date(i,Mois.JANVIER,this.annee);
+            janv[a].jourAssocie();
+            janv[a].getJour();
+            janvier.add(janv[a]);
         }
     
         
         case 2 : 
             for(int a=1;a<=this.joursMois(Mois.FEVRIER);a++){
-            System.out.println("test");
+            fevr[a] = new Date(i,Mois.FEVRIER,this.annee);
+            fevr[a].jourAssocie();
+            fevr[a].getJour();
+            System.out.println(fevr[a]);
+            fevrier.add(fevr[a]);
         }
         
         
         case 3 : 
             for(int a=1;a<=this.joursMois(Mois.MARS);a++){
-            System.out.println("test");
+            marss[a] = new Date(i,Mois.MARS,this.annee);
+            marss[a].jourAssocie();
+            marss[a].getJour();
+            System.out.println(marss[a]);
+            mars.add(marss[a]);
         }
         
         case 4 : 
             for(int a=1;a<=this.joursMois(Mois.AVRIL);a++){
-            System.out.println("test");
+            avri[a] = new Date(i,Mois.AVRIL,this.annee);
+            avri[a].jourAssocie();
+            avri[a].getJour();
+            System.out.println(avri[a]);
+            avril.add(avri[a]);
         }
         
         case 5 : 
             for(int a=1;a<=this.joursMois(Mois.MAI);a++){
-            System.out.println("test");
+            mais[a] = new Date(i,Mois.AVRIL,this.annee);
+            mais[a].jourAssocie();
+            mais[a].getJour();
+            mai.add(mais[a]);
         }
         
         case 6 : 
             for(int a=1;a<=this.joursMois(Mois.JUIN);a++){
-            System.out.println("test");
+            juinn[a] = new Date(i,Mois.JUIN,this.annee);
+            juinn[a].jourAssocie();
+            juinn[a].getJour();
+            juin.add(juinn[a]);
         }
         
         case 7 : 
             for(int a=1;a<=this.joursMois(Mois.JUILLET);a++){
-            System.out.println("test");
+            juil[a] = new Date(i,Mois.JUILLET,this.annee);
+            juil[a].jourAssocie();
+            juil[a].getJour();
+            juillet.add(juil[a]);
         }
         
         case 8 : 
             for(int a=1;a<=this.joursMois(Mois.AOUT);a++){
-            System.out.println("test");
+            aoutt[a] = new Date(i,Mois.AOUT,this.annee);
+            aoutt[a].jourAssocie();
+            aoutt[a].getJour();
+            aout.add(aoutt[a]);
         }
         
         case 9 : 
             for(int a=1;a<=this.joursMois(Mois.SEPTEMBRE);a++){
-            System.out.println("test");
+            semp[a] = new Date(i,Mois.SEPTEMBRE,this.annee);
+            semp[a].jourAssocie();
+            semp[a].getJour();
+            septembre.add(semp[a]);
         }
         
         case 10 : 
             for(int a=1;a<=this.joursMois(Mois.OCTOBRE);a++){
-            System.out.println("test");
+            octo[a] = new Date(i,Mois.OCTOBRE,this.annee);
+            octo[a].jourAssocie();
+            octo[a].getJour();
+            octobre.add(octo[a]);
         }
         
         case 11 : 
             for(int a=1;a<=this.joursMois(Mois.NOVEMBRE);a++){
-            System.out.println("test");
+            nove[a] = new Date(i,Mois.NOVEMBRE,this.annee);
+            nove[a].jourAssocie();
+            nove[a].getJour();
+            novembre.add(nove[a]);
         }
         
         case 12 : 
             for(int a=1;a<=this.joursMois(Mois.DECEMBRE);a++){
-            System.out.println("test");
+            dece[a] = new Date(i,Mois.DECEMBRE,this.annee);
+            dece[a].jourAssocie();
+            dece[a].getJour();
+            decembre.add(dece[a]);
         }
         
         
