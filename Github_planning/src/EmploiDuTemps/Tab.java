@@ -9,6 +9,7 @@ import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import scolarité.Module;
 import Dates.Annee;
+import controlleur.Controlleur;
 import javax.swing.table.TableModel;
 
 /**
@@ -55,7 +56,7 @@ public class Tab extends javax.swing.JFrame {
         
         switch(col){
             case 0 :
-                return "lundi";
+                return "";
                
             case 1 : 
                 return "mardi";
@@ -153,7 +154,7 @@ public class Tab extends javax.swing.JFrame {
             public void run() {
                 
             new Tab().setVisible(true);
-            new Tab().isCellEditable(0, 0);
+            
             
               }
         });
