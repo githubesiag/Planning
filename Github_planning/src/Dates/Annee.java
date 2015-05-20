@@ -207,7 +207,7 @@ public class Annee {
         {
             
         case 1 :
-            System.out.println("On est dans le case 1");
+            
         for(int a=1;a<=this.joursMois(Mois.JANVIER);a++){
             System.out.println(a);
             janv[a] = new Date(i,Mois.JANVIER,this.annee);
@@ -228,11 +228,12 @@ public class Annee {
         
         
         case 3 : 
+            System.out.println("On est dans le case 3");
             for(int a=1;a<=this.joursMois(Mois.MARS);a++){
+            System.out.println(a);    
             marss[a] = new Date(i,Mois.MARS,this.annee);
             marss[a].jourAssocie();
             marss[a].getJour();
-            System.out.println(marss[a]);
             mars.add(marss[a]);
         }
         

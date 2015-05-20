@@ -11,6 +11,8 @@ import Dates.JourOuvre;
 import Dates.Mois;
 import Dates.Annee;
 import EmploiDuTemps.Tab;
+import EmploiDuTemps.Tab.Monmodel;
+import EmploiDuTemps.tableauEmploiDuTemps;
 import javax.swing.JFrame;
 import scolarité.Formation;
 /**
@@ -34,7 +36,18 @@ public class main {
                 System.out.println("Annee "+annee.getAnnee()+ " choisie comporte "+annee.nbJoursTotal());
         calendrier.listeAnnee();
 **/
-        Annee test = new Annee(2014);
-        test.DateMoi(2);
+        
+        Tab fouad = new Tab();
+        fouad.setVisible(true);
+       
+        
+        
+        
+        /**fr.isCellEditable(1,6);
+        fr.isCellEditable(1, 1);
+        fr.setVisible(true);
+        **/
+        //Annee test = new Annee(2014);
+        //test.DateMoi(3);
 }
 }

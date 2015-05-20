@@ -17,15 +17,17 @@ import scolarité.Module;
  */
 public class tableauEmploiDuTemps extends javax.swing.JFrame {
 
+    private boolean refus;
     private Formation formation = new Formation("esiag", new Annee(2015));
     //pascal 
     /**
      * Creates new form tableauEmploiDuTemps
      */
     public tableauEmploiDuTemps() {
+               
         initComponents();
     }
-
+    
     public void setValueAt(Module test, int rowIndex, int columnIndex) {
         //permet mettre un objet module selon le row index et column index 
     }
@@ -138,4 +140,12 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame {
     public double getRowCount(){
         return 2;
     }
+
+public boolean isCellEditable(int row, int column){
+    return false;
+    
+    
+}
+
+
 }

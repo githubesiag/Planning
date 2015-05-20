@@ -115,8 +115,9 @@ public class Controlleur extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        int a = Integer.parseInt(jTextField1.getText());
         Annee t = new Annee(a);
-        String mois = new String();
-        mois = jTextField2.getText();
+        int mois;
+        mois = Integer.parseInt(jTextField2.getText());
+        t.DateMoi(mois);
         int semaine = Integer.parseInt(jTextField3.getText());
      //il faudrait créer les dates ici ?
         

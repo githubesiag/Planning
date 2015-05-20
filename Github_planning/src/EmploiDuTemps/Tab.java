@@ -16,13 +16,14 @@ import javax.swing.table.TableModel;
  * @author Elmouatassim
  */
 public class Tab extends javax.swing.JFrame {
-    private TableModel model;
+    public Monmodel model;
    
     
     /**
      * Creates new form Tab
      */
     public Tab() {
+        model = new Monmodel();
     
         initComponents();
     }
@@ -51,10 +52,37 @@ public class Tab extends javax.swing.JFrame {
         }
         @Override
         public String getColumnName(int col){ 
-        //il faudrait pouvoir recuperer les jour depuis la classe année mais impossible de le faire sans erreur ...
-        return "pa";
+        
+        switch(col){
+            case 0 :
+                return "lundi";
+               
+            case 1 : 
+                return "mardi";
+                
+            case 2 : 
+                return "mercredi";
+                
+            case 3 : 
+                return "jeudi";
+                
+            case 4 : 
+                return "vendredi";
+                
+            case 5 : 
+                return "samedi";
+            
+            case 6 : 
+                return "dimanche";
+            
+            
+        }
+        return null;    
+    }
         
     }
+    public boolean isCellEditable(int row, int column){
+        return false;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,6 +98,7 @@ public class Tab extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTable2.setModel(model);
         jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -78,15 +107,15 @@ public class Tab extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,6 +153,7 @@ public class Tab extends javax.swing.JFrame {
             public void run() {
                 
             new Tab().setVisible(true);
+            new Tab().isCellEditable(0, 0);
             
               }
         });
@@ -133,4 +163,5 @@ public class Tab extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
+
 }
