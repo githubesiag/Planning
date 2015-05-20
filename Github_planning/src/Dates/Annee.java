@@ -19,6 +19,18 @@ public class Annee {
     ArrayList<Mois> listeMois = new ArrayList<Mois>();
     private int nbJours;
     ArrayList<Integer> listeNbJours = new ArrayList<Integer>();
+    ArrayList<Date> janvier = new  ArrayList<Date>();
+    ArrayList<Date> fevrier = new  ArrayList<Date>();
+    ArrayList<Date> mars = new  ArrayList<Date>();
+    ArrayList<Date> avril = new  ArrayList<Date>();
+    ArrayList<Date> mai = new  ArrayList<Date>();
+    ArrayList<Date> juin = new  ArrayList<Date>();
+    ArrayList<Date> juillet = new  ArrayList<Date>();
+    ArrayList<Date> aout = new  ArrayList<Date>();
+    ArrayList<Date> septembre = new  ArrayList<Date>();
+    ArrayList<Date> octobre = new  ArrayList<Date>();
+    ArrayList<Date> novembre = new  ArrayList<Date>();
+    ArrayList<Date> decembre = new  ArrayList<Date>();
 
     public Annee(int annee) {
         this.annee = annee;
@@ -173,4 +185,114 @@ public class Annee {
 
         return nbJoursTotal;
     }
+
+    public void DateMoi(int i){
+        int janv[] = new int[45];
+
+        switch (i)
+        {
+            
+        case 1 :
+        for(int a=1;a<=this.joursMois(Mois.JANVIER);a++){
+            System.out.println("test");
+            //Date janv = new Date(i,Mois.JANVIER,this.annee);
+        }
+    
+        
+        case 2 : 
+            for(int a=1;a<=this.joursMois(Mois.FEVRIER);a++){
+            System.out.println("test");
+        }
+        
+        
+        case 3 : 
+            for(int a=1;a<=this.joursMois(Mois.MARS);a++){
+            System.out.println("test");
+        }
+        
+        case 4 : 
+            for(int a=1;a<=this.joursMois(Mois.AVRIL);a++){
+            System.out.println("test");
+        }
+        
+        case 5 : 
+            for(int a=1;a<=this.joursMois(Mois.MAI);a++){
+            System.out.println("test");
+        }
+        
+        case 6 : 
+            for(int a=1;a<=this.joursMois(Mois.JUIN);a++){
+            System.out.println("test");
+        }
+        
+        case 7 : 
+            for(int a=1;a<=this.joursMois(Mois.JUILLET);a++){
+            System.out.println("test");
+        }
+        
+        case 8 : 
+            for(int a=1;a<=this.joursMois(Mois.AOUT);a++){
+            System.out.println("test");
+        }
+        
+        case 9 : 
+            for(int a=1;a<=this.joursMois(Mois.SEPTEMBRE);a++){
+            System.out.println("test");
+        }
+        
+        case 10 : 
+            for(int a=1;a<=this.joursMois(Mois.OCTOBRE);a++){
+            System.out.println("test");
+        }
+        
+        case 11 : 
+            for(int a=1;a<=this.joursMois(Mois.NOVEMBRE);a++){
+            System.out.println("test");
+        }
+        
+        case 12 : 
+            for(int a=1;a<=this.joursMois(Mois.DECEMBRE);a++){
+            System.out.println("test");
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+
+
+
+
+    }
+
+
+
 }
