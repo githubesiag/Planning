@@ -12,6 +12,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import scolarité.Formation;
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  *
  * @author Christine
  */
-public class Planning {
+public class Planning implements Serializable {
 File file;
     ArrayList<Formation> formations = new ArrayList<Formation>();
     ArrayList<Formation> recuperation = new ArrayList<Formation>();
@@ -27,7 +28,8 @@ File file;
     public Planning(ArrayList<Formation> formations) {
         this.formations = formations;
     }
-
+    public Planning(){}
+    
     public ArrayList<Formation> getFormations() {
         return formations;
     }

@@ -11,8 +11,11 @@ import static java.awt.Color.blue;
 import static java.awt.Color.red;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import projetihm.Planning;
@@ -36,7 +39,7 @@ public class tableauEmploiDuTempsTest {
     private ArrayList<Seance> listeSeances;
     Seances sc = new Seances(listeSeances);
     Module test = new Module("Math","MTH",red,24,sc);
-    Formation formation=new Formation("ESIAG",new Annee(2014));
+    Formation formation=new Formation("ESIAG",t);
     private ArrayList<Module> modules = new ArrayList<Module>();
     
     
@@ -46,9 +49,7 @@ public class tableauEmploiDuTempsTest {
        
     }
 
-    @Test
-    public void testSetValueAt() {
-    }
+    
 
     @Test
     public void testMain() {
@@ -56,20 +57,19 @@ public class tableauEmploiDuTempsTest {
     
     @Test
     public void serialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
-    File file = new File("testUnitaire");
+    File file = new File("testunit");
     planning.serialiser(file);
-    file.exists();
-    
-    
-    
+    assertTrue(file.exists());
+      
     
     }
     @Test
     public void deserialiser() throws IOException, FileNotFoundException, ClassNotFoundException{
     File file = new File("testUnitaire");
+    planning.setFormations(formations);
     planning.serialiser(file);
-    sauvegarde.deserialiser();
-    assertEquals(planning, sauvegarde);
+    sauvegarde.deserialiser(file);
+    Assert.assertEquals(planning.getFormations(), sauvegarde.getFormations());
     
     }
     @Test
@@ -94,7 +94,7 @@ public class tableauEmploiDuTempsTest {
      */
     @Test
     public void TestConstructeurModule() {
-     assertEquals("Math", test.getNom());
+        assertEquals("Math", test.getNom());
         assertEquals("MTH", test.getAbreviation());
         assertEquals(red, test.getCouleur());
         assertEquals(24, test.getDuree(), 0);
@@ -129,8 +129,9 @@ public void nbheureModule(){
 }
    @Test
    public void nbheureFormation(){
+       
        formation.ajouterModule(modules,test);
-       assertEquals(24, formation.dureeTotale(), 0);
+       assertEquals(24, formation.dureeTotale(), 1);
    }
    
 }
