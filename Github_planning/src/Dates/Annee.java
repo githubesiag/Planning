@@ -6,14 +6,17 @@
 package Dates;
 
 import Dates.Mois;
+import EmploiDuTemps.Tab;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
 
 /**
  *
  * @author Christine
  */
-public class Annee {
+public class Annee extends Observable{
 
     private int annee;
     ArrayList<Mois> listeMois = new ArrayList<Mois>();
@@ -37,6 +40,8 @@ public class Annee {
     public Annee(int annee) {
         this.annee = annee;
         nbJours=0;
+        Tab fouad = new Tab(this);
+        fouad.setVisible(true);
         initMois();
     }
 
@@ -756,7 +761,8 @@ public class Annee {
               
         }
 
-
+setChanged();
+notifyObservers();
 
     }
     
@@ -766,6 +772,8 @@ public class Annee {
        
         }
 }
+
+    
     
    
 }

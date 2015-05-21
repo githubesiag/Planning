@@ -13,7 +13,7 @@ import Dates.Mois;
  * @author Fouad777
  */
 public class Controlleur extends javax.swing.JPanel {
-
+Annee t;
     /**
      * Creates new form Controlleur
      */
@@ -40,16 +40,11 @@ public class Controlleur extends javax.swing.JPanel {
 
         jLabel1.setText("Année");
 
-        jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
 
         jLabel2.setText("Mois");
 
@@ -74,15 +69,11 @@ public class Controlleur extends javax.swing.JPanel {
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(jTextField1)
+                    .addComponent(jTextField3))
+                .addGap(10, 10, 10)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -114,13 +105,14 @@ public class Controlleur extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        int a = Integer.parseInt(jTextField1.getText());
-        Annee t = new Annee(a);
+       System.out.println("REGARDE ICI ON RENTRE DANS LA METHODE RAIIII !");
         int mois;
         mois = Integer.parseInt(jTextField2.getText());
         int semaine = Integer.parseInt(jTextField3.getText());
         t.DateMoi(mois,semaine);
         //il faudrait créer les dates ici ?
         
+       
             
             
             

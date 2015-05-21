@@ -39,7 +39,7 @@ public class main {
         
         
         Annee t = new Annee(2015);
-        t.DateMoi(3, 2);
+        //t.DateMoi(3, 2);
         //t.a();
        
         

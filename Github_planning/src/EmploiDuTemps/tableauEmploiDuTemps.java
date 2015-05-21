@@ -8,6 +8,8 @@ package EmploiDuTemps;
 import Dates.Annee;
 import Dates.JourNonOuvre;
 import Dates.JourOuvre;
+import java.util.Observable;
+import java.util.Observer;
 import scolarité.Formation;
 import scolarité.Module;
 
@@ -15,19 +17,25 @@ import scolarité.Module;
  *
  * @author pascal.khuu
  */
-public class tableauEmploiDuTemps extends javax.swing.JFrame {
+public class tableauEmploiDuTemps extends javax.swing.JFrame implements Observer{
 
     private boolean refus;
     private Formation formation = new Formation("esiag", new Annee(2015));
+    private Annee une_annee;
     //pascal 
     /**
      * Creates new form tableauEmploiDuTemps
      */
     public tableauEmploiDuTemps() {
+         
+        initComponents();
+    }
+    public tableauEmploiDuTemps(Annee une_annee) {
+        this.une_annee = une_annee;
+        une_annee.addObserver(this);
                
         initComponents();
     }
-    
     public void setValueAt(Module test, int rowIndex, int columnIndex) {
         //permet mettre un objet module selon le row index et column index 
     }
@@ -146,6 +154,11 @@ public boolean isCellEditable(int row, int column){
     
     
 }
+
+    @Override
+    public void update(Observable o, Object o1) {
+        
+    }
 
 
 }
