@@ -13,6 +13,7 @@ import Dates.Annee;
 import EmploiDuTemps.Tab;
 import EmploiDuTemps.Tab.Monmodel;
 import EmploiDuTemps.tableauEmploiDuTemps;
+import controlleur.Controlleur;
 import javax.swing.JFrame;
 import scolarité.Formation;
 /**
@@ -39,6 +40,9 @@ public class main {
         
         
         Annee t = new Annee(2015);
+        Controlleur ctrl = new Controlleur(t);
+        Tab fouad = new Tab(t);
+        fouad.setVisible(true);
         //t.DateMoi(3, 2);
         //t.a();
        

@@ -7,6 +7,7 @@ package Dates;
 
 import Dates.Mois;
 import EmploiDuTemps.Tab;
+import controlleur.Controlleur;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
@@ -40,8 +41,9 @@ public class Annee extends Observable{
     public Annee(int annee) {
         this.annee = annee;
         nbJours=0;
-        Tab fouad = new Tab(this);
-        fouad.setVisible(true);
+        //Controlleur ctrl = new Controlleur(this);
+        //Tab fouad = new Tab(this);
+        //fouad.setVisible(true);
         initMois();
     }
 
@@ -194,6 +196,7 @@ public class Annee extends Observable{
     }
 
     public void DateMoi(int i, int j){
+        System.out.println("on rentre dans la methode moi ");
        Date[] janv = new Date[32];
        Date[] fevr = new Date[32];
        Date[] marss = new Date[32];

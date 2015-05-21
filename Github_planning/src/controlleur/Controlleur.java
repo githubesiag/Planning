@@ -17,7 +17,16 @@ Annee t;
     /**
      * Creates new form Controlleur
      */
-    public Controlleur() {
+   public Controlleur() {
+        System.out.println("on rentre dans le constructeur sans parametre CONTROLLEUR");
+        initComponents();
+    }
+    
+    public Controlleur(Annee t) {
+        this.t=t;
+        System.out.println("on rentre dans le constructeur avec parametre CONTROLLEUR");
+           
+        
         initComponents();
     }
 
