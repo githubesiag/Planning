@@ -117,9 +117,9 @@ public class Controlleur extends javax.swing.JPanel {
         Annee t = new Annee(a);
         int mois;
         mois = Integer.parseInt(jTextField2.getText());
-        t.DateMoi(mois);
         int semaine = Integer.parseInt(jTextField3.getText());
-     //il faudrait créer les dates ici ?
+        t.DateMoi(mois,semaine);
+        //il faudrait créer les dates ici ?
         
             
             

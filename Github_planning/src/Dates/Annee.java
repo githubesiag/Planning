@@ -31,6 +31,8 @@ public class Annee {
     ArrayList<Date> octobre = new  ArrayList<Date>();
     ArrayList<Date> novembre = new  ArrayList<Date>();
     ArrayList<Date> decembre = new  ArrayList<Date>();
+    ArrayList<Date> semaine = new  ArrayList<Date>();
+    
 
     public Annee(int annee) {
         this.annee = annee;
@@ -186,7 +188,7 @@ public class Annee {
         return nbJoursTotal;
     }
 
-    public void DateMoi(int i){
+    public void DateMoi(int i, int j){
        Date[] janv = new Date[32];
        Date[] fevr = new Date[32];
        Date[] marss = new Date[32];
@@ -202,7 +204,6 @@ public class Annee {
        
            
                
-
         switch (i)
         {
             
@@ -214,6 +215,42 @@ public class Annee {
             janv[a].jourAssocie();
             janv[a].getJour();
             janvier.add(janv[a]);
+                
+                switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(janvier.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(janvier.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(janvier.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(janvier.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(janvier.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
     
         
@@ -235,6 +272,43 @@ public class Annee {
             marss[a].jourAssocie();
             marss[a].getJour();
             mars.add(marss[a]);
+            
+            
+                switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(mars.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(mars.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(mars.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(mars.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(mars.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         case 4 : 
@@ -244,14 +318,86 @@ public class Annee {
             avri[a].getJour();
             System.out.println(avri[a]);
             avril.add(avri[a]);
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(avril.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(avril.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(avril.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(avril.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=30; k++){
+                            semaine.add(avril.get(k));
+                        }
+                            
+                    
+                            
+                }
+            
         }
         
         case 5 : 
             for(int a=1;a<=this.joursMois(Mois.MAI);a++){
-            mais[a] = new Date(i,Mois.AVRIL,this.annee);
+            mais[a] = new Date(i,Mois.MAI,this.annee);
             mais[a].jourAssocie();
             mais[a].getJour();
             mai.add(mais[a]);
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(mai.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(mai.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(mai.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(mai.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(mai.get(k));
+                        }
+                            
+                    
+                            
+                }
+            
         }
         
         case 6 : 
@@ -260,6 +406,42 @@ public class Annee {
             juinn[a].jourAssocie();
             juinn[a].getJour();
             juin.add(juinn[a]);
+             switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(juin.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=30; k++){
+                            semaine.add(juin.get(k));
+                        }
+                            
+                    
+                            
+                }
+            
         }
         
         case 7 : 
@@ -268,6 +450,42 @@ public class Annee {
             juil[a].jourAssocie();
             juil[a].getJour();
             juillet.add(juil[a]);
+            
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(juillet.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(juillet.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(juillet.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(juillet.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(juillet.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         case 8 : 
@@ -276,6 +494,44 @@ public class Annee {
             aoutt[a].jourAssocie();
             aoutt[a].getJour();
             aout.add(aoutt[a]);
+            
+             switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(aout.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(aout.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(aout.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(aout.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(aout.get(k));
+                        }
+                            
+                    
+                            
+                }
+            
+            
         }
         
         case 9 : 
@@ -284,6 +540,41 @@ public class Annee {
             semp[a].jourAssocie();
             semp[a].getJour();
             septembre.add(semp[a]);
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(juin.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(juin.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=30; k++){
+                            semaine.add(juin.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         case 10 : 
@@ -292,6 +583,42 @@ public class Annee {
             octo[a].jourAssocie();
             octo[a].getJour();
             octobre.add(octo[a]);
+            
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(octobre.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(octobre.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(octobre.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(octobre.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(octobre.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         case 11 : 
@@ -300,6 +627,41 @@ public class Annee {
             nove[a].jourAssocie();
             nove[a].getJour();
             novembre.add(nove[a]);
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(novembre.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(novembre.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(novembre.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(novembre.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=30; k++){
+                            semaine.add(novembre.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         case 12 : 
@@ -308,46 +670,58 @@ public class Annee {
             dece[a].jourAssocie();
             dece[a].getJour();
             decembre.add(dece[a]);
+            
+            switch(j){
+                    
+                    case 1 :
+                        for(int k = 0 ;k<=6; k++){
+                            semaine.add(decembre.get(k));
+                        }
+                        
+                        
+                    case 2 : 
+                        for(int k = 7 ;k<=13; k++){
+                            semaine.add(decembre.get(k));
+                        }
+                        
+                        
+                        
+                        
+                    case 3 : for(int k = 14 ;k<=20; k++){
+                            semaine.add(decembre.get(k));
+                        }
+                    
+                        
+                        
+                    case 4 :for(int k = 21 ;k<=27; k++){
+                            semaine.add(decembre.get(k));
+                        }
+                        
+                        
+                        
+                    case 5 : for(int k = 27 ;k<=31; k++){
+                            semaine.add(decembre.get(k));
+                        }
+                            
+                    
+                            
+                }
         }
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         }
-
 
 
 
     }
+    
+   
+        
+            
+            
+            
+        }
 
 
 
-}
