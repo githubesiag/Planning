@@ -37,8 +37,10 @@ public class main {
         calendrier.listeAnnee();
 **/
         
-        Tab fouad = new Tab();
-        fouad.setVisible(true);
+        
+        Annee t = new Annee(2015);
+        t.DateMoi(3, 2);
+        //t.a();
        
         
         

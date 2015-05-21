@@ -201,8 +201,20 @@ public class Annee {
        Date[] octo = new Date[32];
        Date[] nove = new Date[32];
        Date[] dece = new Date[32];
-       
-           
+       semaine.clear();
+       janvier.clear();
+       fevrier.clear();
+       mars.clear();
+       avril.clear();
+       mai.clear();
+       juin.clear();
+       juillet.clear();
+       aout.clear();
+       septembre.clear();
+       octobre.clear();
+       novembre.clear();
+       decembre.clear();
+                
                
         switch (i)
         {
@@ -210,50 +222,65 @@ public class Annee {
         case 1 :
             
         for(int a=1;a<=this.joursMois(Mois.JANVIER);a++){
-            System.out.println(a);
             janv[a] = new Date(i,Mois.JANVIER,this.annee);
             janv[a].jourAssocie();
             janv[a].getJour();
             janvier.add(janv[a]);
+            System.out.println(a);
+            System.out.println(janv[a]);
+            
+            
+        }
+        System.out.println(this.joursMois(Mois.JANVIER));
                 
-                switch(j){
+        
+        
+        switch(j){
+            
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(janvier.get(k));
+                            System.out.println(k);
+                            
+                            
                         }
-                        
+                        break;
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(janvier.get(k));
+                            
+                           
                         }
-                        
+                        break;
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
-                            semaine.add(janvier.get(k));
-                        }
+                            semaine.add(janvier.get(k));                          
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(janvier.get(k));
-                        }
-                        
-                        
-                        
-                    case 5 : for(int k = 27 ;k<=31; k++){
-                            semaine.add(janvier.get(k));
-                        }
                             
-                    
-                            
-                }
+                        }break;
+                        
+                        
+                        
+                    case 5 :
+                        System.out.println("on rentre dans le case 5"); 
+                        for(int k = 28 ; k<31; k++){
+                        System.out.println("On est dans le for");
+                        semaine.add(janvier.get(k));
+                        System.out.println(k); 
+                    } 
+                        break;
         }
-    
         
+       
         case 2 : 
             for(int a=1;a<=this.joursMois(Mois.FEVRIER);a++){
             fevr[a] = new Date(i,Mois.FEVRIER,this.annee);
@@ -261,11 +288,11 @@ public class Annee {
             fevr[a].getJour();
             System.out.println(fevr[a]);
             fevrier.add(fevr[a]);
-        }
+        }break;
         
         
         case 3 : 
-            System.out.println("On est dans le case 3");
+            //System.out.println("On est dans le case 3");
             for(int a=1;a<=this.joursMois(Mois.MARS);a++){
             System.out.println(a);    
             marss[a] = new Date(i,Mois.MARS,this.annee);
@@ -274,42 +301,44 @@ public class Annee {
             mars.add(marss[a]);
             
             
+        }
+        
                 switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(mars.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
+                        System.out.println("On est dans le 3 de mars raii !");
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(mars.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(mars.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(mars.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 28 ;k<31; k++){
                             semaine.add(mars.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-        }
+                }break;
         
         case 4 : 
             for(int a=1;a<=this.joursMois(Mois.AVRIL);a++){
@@ -318,43 +347,44 @@ public class Annee {
             avri[a].getJour();
             System.out.println(avri[a]);
             avril.add(avri[a]);
-            switch(j){
+           
+            
+        }
+         switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(avril.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(avril.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(avril.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(avril.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=30; k++){
+                    case 5 : for(int k = 27 ;k<30; k++){
                             semaine.add(avril.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-            
-        }
+                }break;
         
         case 5 : 
             for(int a=1;a<=this.joursMois(Mois.MAI);a++){
@@ -362,43 +392,48 @@ public class Annee {
             mais[a].jourAssocie();
             mais[a].getJour();
             mai.add(mais[a]);
+            
+            
+        }
             switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(mai.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(mai.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(mai.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(mai.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 27 ;k<31; k++){
                             semaine.add(mai.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-            
-        }
+                }break;
+        
+                    
+                            
+                
         
         case 6 : 
             for(int a=1;a<=this.joursMois(Mois.JUIN);a++){
@@ -406,43 +441,45 @@ public class Annee {
             juinn[a].jourAssocie();
             juinn[a].getJour();
             juin.add(juinn[a]);
-             switch(j){
+             
+            
+        }
+            
+        switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(juin.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(juin.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(juin.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(juin.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=30; k++){
+                    case 5 : for(int k = 27 ;k<30; k++){
                             semaine.add(juin.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-            
-        }
+                }break;
         
         case 7 : 
             for(int a=1;a<=this.joursMois(Mois.JUILLET);a++){
@@ -451,42 +488,44 @@ public class Annee {
             juil[a].getJour();
             juillet.add(juil[a]);
             
+            
+        }
+         
             switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(juillet.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(juillet.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(juillet.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(juillet.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 27 ;k<31; k++){
                             semaine.add(juillet.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-        }
+                }break;
         
         case 8 : 
             for(int a=1;a<=this.joursMois(Mois.AOUT);a++){
@@ -495,44 +534,46 @@ public class Annee {
             aoutt[a].getJour();
             aout.add(aoutt[a]);
             
-             switch(j){
+             
+            
+            
+        }
+                      
+                  switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(aout.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(aout.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(aout.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(aout.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 27 ;k<31; k++){
                             semaine.add(aout.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-            
-            
-        }
+                }break;
         
         case 9 : 
             for(int a=1;a<=this.joursMois(Mois.SEPTEMBRE);a++){
@@ -540,42 +581,44 @@ public class Annee {
             semp[a].jourAssocie();
             semp[a].getJour();
             septembre.add(semp[a]);
-            switch(j){
+            
+        }
+        switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
-                            semaine.add(juin.get(k));
-                        }
+                            semaine.add(septembre.get(k));
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
-                            semaine.add(juin.get(k));
-                        }
+                            semaine.add(septembre.get(k));
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
-                            semaine.add(juin.get(k));
-                        }
+                            semaine.add(septembre.get(k));
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
-                            semaine.add(juin.get(k));
-                        }
+                            semaine.add(septembre.get(k));
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=30; k++){
-                            semaine.add(juin.get(k));
-                        }
+                    case 5 : for(int k = 28 ;k<30; k++){
+                            semaine.add(septembre.get(k));
+                        }break;
                             
                     
                             
-                }
-        }
+                }break;
+        
         
         case 10 : 
             for(int a=1;a<=this.joursMois(Mois.OCTOBRE);a++){
@@ -584,42 +627,43 @@ public class Annee {
             octo[a].getJour();
             octobre.add(octo[a]);
             
-            switch(j){
+            
+        }
+        switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(octobre.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(octobre.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(octobre.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(octobre.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 28 ;k<31; k++){
                             semaine.add(octobre.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-        }
+                }break;
         
         case 11 : 
             for(int a=1;a<=this.joursMois(Mois.NOVEMBRE);a++){
@@ -627,42 +671,43 @@ public class Annee {
             nove[a].jourAssocie();
             nove[a].getJour();
             novembre.add(nove[a]);
-            switch(j){
+            
+        }
+        switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(novembre.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(novembre.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(novembre.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(novembre.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=30; k++){
+                    case 5 : for(int k = 28 ;k<30; k++){
                             semaine.add(novembre.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-        }
+                }break;
         
         case 12 : 
             for(int a=1;a<=this.joursMois(Mois.DECEMBRE);a++){
@@ -671,57 +716,63 @@ public class Annee {
             dece[a].getJour();
             decembre.add(dece[a]);
             
-            switch(j){
+           
+        }
+         switch(j){
                     
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(decembre.get(k));
-                        }
+                        }break;
                         
                         
                     case 2 : 
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(decembre.get(k));
-                        }
+                        }break;
                         
                         
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
                             semaine.add(decembre.get(k));
-                        }
+                        }break;
                     
                         
                         
                     case 4 :for(int k = 21 ;k<=27; k++){
                             semaine.add(decembre.get(k));
-                        }
+                        }break;
                         
                         
                         
-                    case 5 : for(int k = 27 ;k<=31; k++){
+                    case 5 : for(int k = 28 ;k<31; k++){
                             semaine.add(decembre.get(k));
-                        }
+                        }break;
                             
                     
                             
-                }
-        }
-        
-        
-        
+                }break;
+              
         }
 
 
 
     }
     
-   
-        
-            
-            
-            
+    public void a(){
+        for(int i =0;i<=janvier.size();i++){
+            System.out.println("l''objet suivant a l''adresse suivante "+janvier.get(i)+"et a le numero "+i);
+       
         }
+}
+    
+   
+}
+          
+            
+            
+        
 
 
 
