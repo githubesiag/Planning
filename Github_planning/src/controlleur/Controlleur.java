@@ -25,6 +25,7 @@ Annee t;
     public Controlleur(Annee t) {
         this.t=t;
         System.out.println("on rentre dans le constructeur avec parametre CONTROLLEUR");
+        
            
         
         initComponents();
