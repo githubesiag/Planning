@@ -40,11 +40,13 @@ public class main {
         
         
         Annee t = new Annee(2015);
+        tableauEmploiDuTemps test = new tableauEmploiDuTemps(t);
+        test.setVisible(true);
         //Tab fouad = new Tab(t);
         //fouad.setVisible(true);
         
-      t.DateMoi(1, 1);
-      t.test(3);
+      //t.DateMoi(1, 1);
+      //t.test(3);
         //t.a(0);
         //t.b(0);
         //t.c(0);
