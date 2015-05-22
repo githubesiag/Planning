@@ -33,8 +33,9 @@ public class tableauEmploiDuTempsTest {
     ArrayList<Formation> recuperation = new ArrayList<Formation>();
     Planning planning = new Planning(formations);
     Planning sauvegarde = new Planning(recuperation);
-    tableauEmploiDuTemps EmploiDuTemps = new tableauEmploiDuTemps();
+    
     Annee t = new Annee(2015);
+    tableauEmploiDuTemps EmploiDuTemps = new tableauEmploiDuTemps(t);
     Annee bis = new Annee(2012);
     private ArrayList<Seance> listeSeances;
     Seances sc = new Seances(listeSeances);
