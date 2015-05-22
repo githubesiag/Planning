@@ -42,8 +42,12 @@ public class main {
         Annee t = new Annee(2015);
         //Tab fouad = new Tab(t);
         //fouad.setVisible(true);
-        t.DateMoi(3, 3);
-        t.a();
+        
+      t.DateMoi(1, 1);
+      t.test(3);
+        //t.a(0);
+        //t.b(0);
+        //t.c(0);
         //t.DateMoi(3, 2);
         //t.a();
        

@@ -50,6 +50,8 @@ public class Date {
     public void setAnnee(int annee) {
         this.annee = annee;
     }
+    
+  
 
     public Jour jourAssocie() {
         int jour = this.getNumeroJour();

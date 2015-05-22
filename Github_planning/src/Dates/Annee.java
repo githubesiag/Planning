@@ -35,7 +35,10 @@ public class Annee extends Observable{
     ArrayList<Date> octobre = new  ArrayList<Date>();
     ArrayList<Date> novembre = new  ArrayList<Date>();
     ArrayList<Date> decembre = new  ArrayList<Date>();
-    ArrayList<Date> semaine = new  ArrayList<Date>();
+    public ArrayList<Date> semaine = new  ArrayList<Date>();
+    public String jour = new String();
+    public String moi = new String();
+    public int numjour;
     
 
     public Annee(int annee) {
@@ -196,7 +199,6 @@ public class Annee extends Observable{
     }
 
     public void DateMoi(int i, int j){
-        System.out.println("on rentre dans la methode moi ");
        Date[] janv = new Date[32];
        Date[] fevr = new Date[32];
        Date[] marss = new Date[32];
@@ -234,8 +236,9 @@ public class Annee extends Observable{
             janv[a] = new Date(i,Mois.JANVIER,this.annee);
             janv[a].jourAssocie();
             janv[a].getJour();
+            janv[a].associerJour(i);
             janvier.add(janv[a]);
-            System.out.println(a);
+            //System.out.println(a);
             System.out.println(janv[a]);
             
             
@@ -250,7 +253,8 @@ public class Annee extends Observable{
                     case 1 :
                         for(int k = 0 ;k<=6; k++){
                             semaine.add(janvier.get(k));
-                            System.out.println(k);
+                            
+                            System.out.println();
                             
                             
                         }
@@ -280,14 +284,12 @@ public class Annee extends Observable{
                         
                         
                     case 5 :
-                        System.out.println("on rentre dans le case 5"); 
                         for(int k = 28 ; k<31; k++){
-                        System.out.println("On est dans le for");
                         semaine.add(janvier.get(k));
-                        System.out.println(k); 
+                        
                     } 
-                        break;
-        }
+                        
+        }break;
         
        
         case 2 : 
@@ -302,9 +304,7 @@ public class Annee extends Observable{
         
         
         case 3 : 
-            System.out.println("mars");
             for(int a=1;a<=this.joursMois(Mois.MARS);a++){
-            System.out.println(a);    
             marss[a] = new Date(i,Mois.MARS,this.annee);
             marss[a].jourAssocie();
             marss[a].getJour();
@@ -322,7 +322,6 @@ public class Annee extends Observable{
                         
                         
                     case 2 : 
-                        System.out.println("On est dans le 3 de mars raii !");
                         for(int k = 7 ;k<=13; k++){
                             semaine.add(mars.get(k));
                         }break;
@@ -331,9 +330,7 @@ public class Annee extends Observable{
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
-                        System.out.println("case 3 moi de mars");
-                        System.out.println(k);
-                            semaine.add(mars.get(k));
+                                semaine.add(mars.get(k));
                         }break;
                     
                         
@@ -773,26 +770,40 @@ notifyObservers();
 
     }
     
-    public void a(){
-        for(int i =0;i<=semaine.size();i++){
+   public void a(){
+        
+            for (int v = 0;v<=semaine.size();v++){
+            jour = semaine.get(v).getJour().name();   
+            System.out.println(jour); 
+            }
             
-            
-            int jour;
-            jour = semaine.get(i).getNumeroJour();
-            
-         
-       }
-     
 }
+    public String b(int i){
+        moi = semaine.get(i).getMois().name();
+        System.out.println(moi);
+        return moi;
+        
+        
+      
+    }
+    public int c(int i){
+        numjour = semaine.get(i).getNumeroJour();
+        System.out.println(numjour);
+        return numjour;
+             
+            //return semaine.get(i).getNumeroJour();
+      
+    }
 
-    
-    
-   
-}
+   public void test(int i){
+      
+       System.out.println("on rentre dans le test");
+       System.out.println(semaine.get(i).getNumeroJour());
+   }   
           
             
             
-        
+      
 
 
-
+}

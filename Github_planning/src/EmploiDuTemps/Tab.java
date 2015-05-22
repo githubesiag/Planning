@@ -69,10 +69,10 @@ public class Tab extends javax.swing.JFrame implements Observer {
         }
         @Override
         public String getColumnName(int col){ 
-        
-        switch(col){
+        System.out.println("On rentre dans le column");
+       /** switch(col){
             case 0 :
-                return "lundi";
+                return null;
                
             case 1 : 
                 return "mardi";
@@ -94,7 +94,14 @@ public class Tab extends javax.swing.JFrame implements Observer {
             
             
         }
-        return null;    
+        return null;**/
+        for(col = 0; col <=une_annee.semaine.size(); col++){
+            
+        System.out.println("on rentre dans le for");
+            return une_annee.a(col)+une_annee.c(col)+une_annee.b(col);
+            
+        }
+            return null;
     }
         
     }
