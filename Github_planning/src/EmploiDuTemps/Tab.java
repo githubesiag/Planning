@@ -98,7 +98,7 @@ public class Tab extends javax.swing.JFrame implements Observer {
         for(col = 0; col <=une_annee.semaine.size(); col++){
             
         System.out.println("on rentre dans le for");
-            return une_annee.a(col)+une_annee.c(col)+une_annee.b(col);
+            //return une_annee.a(col)+une_annee.c(col)+une_annee.b(col);
             
         }
             return null;
