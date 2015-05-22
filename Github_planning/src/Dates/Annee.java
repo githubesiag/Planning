@@ -228,7 +228,8 @@ public class Annee extends Observable{
         {
             
         case 1 :
-            
+        System.out.println("Janvier");
+                           
         for(int a=1;a<=this.joursMois(Mois.JANVIER);a++){
             janv[a] = new Date(i,Mois.JANVIER,this.annee);
             janv[a].jourAssocie();
@@ -290,6 +291,7 @@ public class Annee extends Observable{
         
        
         case 2 : 
+            System.out.println("février");
             for(int a=1;a<=this.joursMois(Mois.FEVRIER);a++){
             fevr[a] = new Date(i,Mois.FEVRIER,this.annee);
             fevr[a].jourAssocie();
@@ -300,7 +302,7 @@ public class Annee extends Observable{
         
         
         case 3 : 
-            //System.out.println("On est dans le case 3");
+            System.out.println("mars");
             for(int a=1;a<=this.joursMois(Mois.MARS);a++){
             System.out.println(a);    
             marss[a] = new Date(i,Mois.MARS,this.annee);
@@ -329,6 +331,8 @@ public class Annee extends Observable{
                         
                         
                     case 3 : for(int k = 14 ;k<=20; k++){
+                        System.out.println("case 3 moi de mars");
+                        System.out.println(k);
                             semaine.add(mars.get(k));
                         }break;
                     
@@ -770,10 +774,15 @@ notifyObservers();
     }
     
     public void a(){
-        for(int i =0;i<=janvier.size();i++){
-            System.out.println("l''objet suivant a l''adresse suivante "+janvier.get(i)+"et a le numero "+i);
-       
-        }
+        for(int i =0;i<=semaine.size();i++){
+            
+            
+            int jour;
+            jour = semaine.get(i).getNumeroJour();
+            
+         
+       }
+     
 }
 
     
