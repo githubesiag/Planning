@@ -40,7 +40,7 @@ public class main {
         
         
         Annee t = new Annee(2015);
-        Controlleur ctrl = new Controlleur(t);
+        //Controlleur ctrl = new Controlleur(t);
         Tab fouad = new Tab(t);
         fouad.setVisible(true);
         //t.DateMoi(3, 2);

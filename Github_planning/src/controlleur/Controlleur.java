@@ -23,8 +23,10 @@ Annee t;
     }
     
     public Controlleur(Annee t) {
+        System.out.println("on rentre dans le constructeur avec parametre du controlleur");
         this.t=t;
-        System.out.println("on rentre dans le constructeur avec parametre CONTROLLEUR");
+        this.t=new Annee(t.getAnnee());
+        System.out.println("l'objet t dans le constrcteur du controlleur année a pour adresse mémoire "+t);
         
            
         
@@ -119,6 +121,7 @@ Annee t;
         int mois;
         mois = Integer.parseInt(jTextField2.getText());
         int semaine = Integer.parseInt(jTextField3.getText());
+        System.out.println("on affiche l'adresse de l'objet t dans la methode bouton "+t);
         t.DateMoi(mois,semaine);
         //il faudrait créer les dates ici ?
         
