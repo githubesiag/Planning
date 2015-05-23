@@ -6,8 +6,8 @@
 package Dates;
 
 import Dates.Mois;
-import EmploiDuTemps.Tab;
-import controlleur.Controlleur;
+import planning.view.Tab;
+import planning.controller.Controlleur;
 import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;

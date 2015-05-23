@@ -5,6 +5,7 @@
  */
 package EmploiDuTemps;
 
+import planning.view.tableauEmploiDuTemps;
 import Dates.Annee;
 import java.awt.Color;
 import static java.awt.Color.blue;

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EmploiDuTemps;
+package planning.view;
 
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import scolarité.Module;
 import Dates.Annee;
-import controlleur.Controlleur;
+import planning.controller.Controlleur;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.table.TableModel;
@@ -119,7 +119,7 @@ public class Tab extends javax.swing.JFrame implements Observer {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        controlleur1 = new controlleur.Controlleur(this.une_annee);
+        controlleur1 = new planning.controller.Controlleur(this.une_annee);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -171,7 +171,7 @@ public class Tab extends javax.swing.JFrame implements Observer {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private controlleur.Controlleur controlleur1;
+    private planning.controller.Controlleur controlleur1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables

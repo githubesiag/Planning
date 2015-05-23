@@ -88,9 +88,9 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="controlleur.Controlleur" name="controlleur1">
+    <Component class="planning.controller.Controlleur" name="controlleur1">
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new controlleur.Controlleur(this.une_annee)"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new planning.controller.Controlleur(this.une_annee)"/>
       </AuxValues>
     </Component>
   </SubComponents>

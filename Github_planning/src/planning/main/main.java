@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetihm;
+package planning.main;
 import Dates.Calendrier;
 import Dates.Date;
 import Dates.JourNonOuvre;
 import Dates.JourOuvre;
 import Dates.Mois;
 import Dates.Annee;
-import EmploiDuTemps.Tab;
-import EmploiDuTemps.Tab.Monmodel;
-import EmploiDuTemps.tableauEmploiDuTemps;
-import controlleur.Controlleur;
+import planning.view.Tab;
+import planning.view.Tab.Monmodel;
+import planning.view.tableauEmploiDuTemps;
+import planning.controller.Controlleur;
 import javax.swing.JFrame;
 import scolarité.Formation;
 /**

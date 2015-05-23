@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EmploiDuTemps;
+package planning.view;
 
 import Dates.Annee;
 import Dates.JourNonOuvre;
@@ -53,7 +53,7 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame implements Observer
 
         jScrollPane2 = new javax.swing.JScrollPane();
         emploiDuTemps = new javax.swing.JTable();
-        controlleur1 = new controlleur.Controlleur(this.une_annee);
+        controlleur1 = new planning.controller.Controlleur(this.une_annee);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -142,7 +142,7 @@ public class tableauEmploiDuTemps extends javax.swing.JFrame implements Observer
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private controlleur.Controlleur controlleur1;
+    private planning.controller.Controlleur controlleur1;
     private javax.swing.JTable emploiDuTemps;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
