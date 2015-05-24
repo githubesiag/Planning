@@ -77,7 +77,6 @@ public class EmploiDuTemps extends javax.swing.JPanel implements Observer {
             }
             return res;
            
-            
         }
 
         @Override
@@ -89,6 +88,13 @@ public class EmploiDuTemps extends javax.swing.JPanel implements Observer {
              */
             return null;
         }
+        
+        public boolean isCellEditable(int row, int column) {
+           if ((column==5)|| (column==6)){
+        return false;
+    }
+           return true;
+    }
 
        
 

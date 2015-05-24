@@ -7,7 +7,9 @@ package planning;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import javafx.scene.control.Tab;
 import planning.controller.PlanningController;
+import planning.controller.util.Annee;
 import planning.model.PlanningModel;
 import planning.view.EmploiDuTemps;
 
@@ -71,7 +73,7 @@ public class PlanningStart extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
+    /**tt
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -98,6 +100,8 @@ public class PlanningStart extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        
+    ;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
