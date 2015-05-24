@@ -3,13 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package planning.controller.util;
 
-package Dates;
 
-/**
- *
- * @author Christine
- */
 public enum Jour {
+
     LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
 }

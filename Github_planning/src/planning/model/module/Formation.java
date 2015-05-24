@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package scolarité;
 
-import Dates.Annee;
+package planning.model.module;
+
+import planning.controller.util.Annee;
 import java.awt.Color;
 import java.util.ArrayList;
 
-/**
- *
- * @author Christine
- */
+
 public class Formation {
 
     private int nbLimite = 3;
@@ -87,6 +80,7 @@ public class Formation {
             System.out.println("Erreur! Le module " + m.getNom() + " ne peut être ajouté");
         }
     }
+
     public void ajouterModule(Module m) {
         if (verifNbSeances(m) == true) {
             this.modules.add(m);
@@ -94,6 +88,7 @@ public class Formation {
             System.out.println("Erreur! Le module " + m.getNom() + " ne peut être ajouté");
         }
     }
+
     public String getNom() {
         return nom;
     }

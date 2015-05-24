@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package scolarité;
 
-import scolarité.Formateur;
+package planning.model.module;
 
-/**
- *
- * @author Christine
- */
+import planning.model.module.Formateur;
+
+
 public class Seance {
 
     private String descriptionSeance;
@@ -18,7 +11,7 @@ public class Seance {
 
     public Seance(String descriptionSeance) {
         this.descriptionSeance = descriptionSeance;
-       // this.formateur = formateur;
+        // this.formateur = formateur;
     }
 
     public String getDescriptionSeance() {

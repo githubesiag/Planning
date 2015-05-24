@@ -1,12 +1,10 @@
-package Dates;
+package planning.controller.util;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author Pascal
@@ -18,13 +16,11 @@ public class Date {
     int annee;
     Jour jour;
 
-  
-
     public Date(int numeroJour, Mois mois, int annee) {
         this.mois = mois;
         this.numeroJour = numeroJour;
         this.annee = annee;
-        this.jour=this.jourAssocie();
+        this.jour = this.jourAssocie();
     }
 
     public Mois getMois() {
@@ -50,8 +46,6 @@ public class Date {
     public void setAnnee(int annee) {
         this.annee = annee;
     }
-    
-  
 
     public Jour jourAssocie() {
         int jour = this.getNumeroJour();
@@ -107,7 +101,8 @@ public class Date {
         }
         return unMois;
     }
-      public Jour getJour() {
+
+    public Jour getJour() {
         return jour;
     }
 
@@ -131,5 +126,10 @@ public class Date {
             jour = Jour.DIMANCHE;
         }
         return jour;
+    }
+    
+    @Override
+    public String toString(){
+        return this.jour+" "+this.numeroJour+" "+this.mois+" "+this.annee;
     }
 }

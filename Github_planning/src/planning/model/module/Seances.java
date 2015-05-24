@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package scolarité;
+
+package planning.model.module;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Christine
- */
+
 public class Seances {
 
     private int m; //nombre de séances

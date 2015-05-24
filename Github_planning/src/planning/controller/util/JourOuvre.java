@@ -1,22 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dates;
-import Dates.Jours;
-import Dates.Jour;
-import java.util.ArrayList;
-import static Dates.Jour.JEUDI;
-import static Dates.Jour.LUNDI;
-import static Dates.Jour.MARDI;
-import static Dates.Jour.MERCREDI;
-import static Dates.Jour.VENDREDI;
 
-/**
- *
- * @author Christine
- */
+package planning.controller.util;
+
+import planning.controller.util.Jours;
+import planning.controller.util.Jour;
+import java.util.ArrayList;
+import static planning.controller.util.Jour.JEUDI;
+import static planning.controller.util.Jour.LUNDI;
+import static planning.controller.util.Jour.MARDI;
+import static planning.controller.util.Jour.MERCREDI;
+import static planning.controller.util.Jour.VENDREDI;
+
+
 public class JourOuvre extends Jours {
 
     ArrayList<Jour> joursOuvres = new ArrayList<Jour>();

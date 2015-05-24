@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Dates;
-import Dates.Jours;
-import Dates.Jour;
-import static Dates.Jour.DIMANCHE;
-import static Dates.Jour.SAMEDI;
+package planning.controller.util;
+
+import planning.controller.util.Jours;
+import planning.controller.util.Jour;
+import static planning.controller.util.Jour.DIMANCHE;
+import static planning.controller.util.Jour.SAMEDI;
 import java.util.ArrayList;
 
 
-/**
- *
- * @author Christine
- */
 public class JourNonOuvre extends Jours {
 
     ArrayList<Jour> joursNonOuvres = new ArrayList<Jour>();
